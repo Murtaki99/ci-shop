@@ -10,11 +10,11 @@
     <title>CIShop <?= isset($title) ? $title : 'CIShop'  ?></title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/navbar-fixed/">
     <!-- Bootstrap core CSS -->
-    <link href="assets/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= base_url('assets/libs/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
     <!-- font-awesome -->
-    <link rel="stylesheet" href="assets/libs/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/libs/fontawesome/css/all.min.css') ?>">
     <!-- Costum Css -->
-    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="<?= base_url('assets/css/app.css') ?>">
 </head>
 
 <body>
@@ -24,11 +24,10 @@
         <?php $this->load->view($page); ?>
     </div>
     <!-- End Content Main -->
-
-    <script src="assets/libs/jquery/jquery.com_jquery-3.7.1.min.js"></script>
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/app_product.js"></script>
-    <script src="assets/js/app_category.js"></script>
+    <script src="<?= base_url('assets/libs/jquery/jquery.com_jquery-3.7.1.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/libs/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/app_product.js'); ?>"></script>
+    <script src="<?= base_url('assets/js/app_category.js'); ?>"></script>
 </body>
 
 </html>
