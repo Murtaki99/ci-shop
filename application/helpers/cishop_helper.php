@@ -1,8 +1,9 @@
 <?php
 
-function getDropdownList($table, $columns){
+function getDropdownList($table, $columns)
+{
 
-    $CI =& get_instance();
+    $CI = &get_instance();
     $query = $CI->db->select($table)->from($table)->get();
 
     if ($query->num_rows() >= 1) {
@@ -15,14 +16,16 @@ function getDropdownList($table, $columns){
     return $options = ['' => '- Select -'];
 }
 
-function getCategoris(){
-    $CI    =& get_instance();
+function getCategoris()
+{
+    $CI    = &get_instance();
     $query = $CI->db->get('category')->result();
     return $query;
 }
 
-function getCart(){
-    $CI     =& get_instance();
+function getCart()
+{
+    $CI     = &get_instance();
     $userId = $CI->session->userdata('id');
 
     if ($userId) {
@@ -32,15 +35,17 @@ function getCart(){
     return false;
 }
 
-function hashEncrypt($input){
+function hashEncrypt($input)
+{
     $hash = password_hash($input, PASSWORD_DEFAULT);
     return $hash;
 }
 
-function hashEncryptVerify($input, $hash){
-    if (password_hash($input, $hash)) {
+function hashEncryptVerify($input, $hash)
+{
+    if (password_verify($input, $hash)) {
         return true;
-    }else {
+    } else {
         return false;
     }
 }

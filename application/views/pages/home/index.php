@@ -6,7 +6,7 @@
         <!-- <a class="btn btn-lg btn-primary" href="/docs/4.3/components/navbar/" role="button">View navbar docs
                 &raquo;</a> -->
     </div>
-    <?php $this->load->view('layouts/alert'); ?>
+    <?php $this->load->view('layouts/_alert'); ?>
     <div class="row">
         <!-- Left -->
         <div class="col-md-9">
@@ -16,8 +16,7 @@
                         <div class="card-body">
                             Category: <strong>All Categories</strong>
                             <span class="float-right">
-                                List Price: <a href="#" class="badge badge-primary">Cheapest</a> | <a href="#"
-                                    class="badge badge-primary">Expensive</a>
+                                List Price: <a href="#" class="badge badge-primary">Cheapest</a> | <a href="#" class="badge badge-primary">Expensive</a>
                             </span>
                         </div>
                     </div>
